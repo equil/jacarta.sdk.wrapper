@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		655653CA5502B809CE21B5EF /* JaCarta.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.m */; };
+		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
 		6B273D531946212D00740B02 /* ARJaCartaWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B273D521946212D00740B02 /* ARJaCartaWrapper.h */; };
 		6B273D5C1946212D00740B02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5B1946212D00740B02 /* XCTest.framework */; };
@@ -27,6 +27,7 @@
 		6B273E0D194664B200740B02 /* pkcs11.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565775C7BF2350C69E3AD4 /* pkcs11.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0E194664B400740B02 /* pkcs11f.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565536643D76AC3BBB6030 /* pkcs11f.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273E19194666F400740B02 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273E18194666F400740B02 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 /* Begin PBXFileReference section */
 		65565250EDBA18BFA47A4738 /* C_jcControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_jcControl.h; path = ../jacarta/include/C_jcControl.h; sourceTree = "<group>"; };
 		65565536643D76AC3BBB6030 /* pkcs11f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11f.h; path = ../jacarta/include/pkcs11f.h; sourceTree = "<group>"; };
-		6556557ECA05C7646C6BB3C6 /* JaCarta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JaCarta.m; sourceTree = "<group>"; };
+		6556557ECA05C7646C6BB3C6 /* JaCarta.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JaCarta.mm; sourceTree = "<group>"; };
 		65565775C7BF2350C69E3AD4 /* pkcs11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11.h; path = ../jacarta/include/pkcs11.h; sourceTree = "<group>"; };
 		655658589DA5EBD9633CE031 /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Extensions.h; path = ../jacarta/include/Extensions.h; sourceTree = "<group>"; };
 		655658C8D0B5C5FE44B64A88 /* cryptoki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptoki.h; path = ../jacarta/include/cryptoki.h; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		6B273D691946212D00740B02 /* ARJaCartaWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARJaCartaWrapperTests.m; sourceTree = "<group>"; };
 		6B273D731946278200740B02 /* libjcPKCS11.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjcPKCS11.a; path = ../jacarta/libjcPKCS11.a; sourceTree = "<group>"; };
 		6B273D7519465AA000740B02 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		6B273E18194666F400740B02 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B273E19194666F400740B02 /* libstdc++.dylib in Frameworks */,
 				6B273D7619465AA000740B02 /* ExternalAccessory.framework in Frameworks */,
 				6B273D741946278200740B02 /* libjcPKCS11.a in Frameworks */,
 				6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		6B273D4C1946212D00740B02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B273E18194666F400740B02 /* libstdc++.dylib */,
 				6B273D7519465AA000740B02 /* ExternalAccessory.framework */,
 				6B273D731946278200740B02 /* libjcPKCS11.a */,
 				6B273D4D1946212D00740B02 /* Foundation.framework */,
@@ -152,7 +156,7 @@
 			children = (
 				6B273D521946212D00740B02 /* ARJaCartaWrapper.h */,
 				6B273D501946212D00740B02 /* Supporting Files */,
-				6556557ECA05C7646C6BB3C6 /* JaCarta.m */,
+				6556557ECA05C7646C6BB3C6 /* JaCarta.mm */,
 				65565E3C204832CA029F97D8 /* JaCarta.h */,
 			);
 			path = ARJaCartaWrapper;
@@ -284,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655653CA5502B809CE21B5EF /* JaCarta.m in Sources */,
+				655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
