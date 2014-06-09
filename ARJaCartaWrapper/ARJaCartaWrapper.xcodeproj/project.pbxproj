@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		655651FE28C0ED0DD48DFAD8 /* dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 65565F3D630DB63A6F464636 /* dummy.c */; };
+		655650CC9234E81AF1152844 /* dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 6556555F2E85792F8F962366 /* dummy.c */; };
 		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
 		65565A7A8DE6B5505B776E6F /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655E0C3B24D75D838D6B0 /* dummy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
@@ -58,6 +58,7 @@
 /* Begin PBXFileReference section */
 		65565250EDBA18BFA47A4738 /* C_jcControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_jcControl.h; path = ../jacarta/include/C_jcControl.h; sourceTree = "<group>"; };
 		65565536643D76AC3BBB6030 /* pkcs11f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11f.h; path = ../jacarta/include/pkcs11f.h; sourceTree = "<group>"; };
+		6556555F2E85792F8F962366 /* dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dummy.c; sourceTree = "<group>"; };
 		6556557ECA05C7646C6BB3C6 /* JaCarta.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JaCarta.mm; sourceTree = "<group>"; };
 		655655E0C3B24D75D838D6B0 /* dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
 		65565775C7BF2350C69E3AD4 /* pkcs11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11.h; path = ../jacarta/include/pkcs11.h; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		655658C8D0B5C5FE44B64A88 /* cryptoki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptoki.h; path = ../jacarta/include/cryptoki.h; sourceTree = "<group>"; };
 		65565E3C204832CA029F97D8 /* JaCarta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaCarta.h; sourceTree = "<group>"; };
 		65565EB9FA984C14C5E595D7 /* pkcs11t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11t.h; path = ../jacarta/include/pkcs11t.h; sourceTree = "<group>"; };
-		65565F3D630DB63A6F464636 /* dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dummy.c; path = "../../../../JaCarta/JC-Mobile SDK 1.0/iOS/libs/JCMobile/dummy.c"; sourceTree = "<group>"; };
 		65565F54924B95780E080B90 /* VisualExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisualExtensions.h; path = ../jacarta/include/VisualExtensions.h; sourceTree = "<group>"; };
 		6B273D4A1946212D00740B02 /* libARJaCartaWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARJaCartaWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B273D4D1946212D00740B02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,8 +162,8 @@
 				6B273D501946212D00740B02 /* Supporting Files */,
 				6556557ECA05C7646C6BB3C6 /* JaCarta.mm */,
 				65565E3C204832CA029F97D8 /* JaCarta.h */,
-				65565F3D630DB63A6F464636 /* dummy.c */,
 				655655E0C3B24D75D838D6B0 /* dummy.h */,
+				6556555F2E85792F8F962366 /* dummy.c */,
 			);
 			path = ARJaCartaWrapper;
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */,
-				655651FE28C0ED0DD48DFAD8 /* dummy.c in Sources */,
+				655650CC9234E81AF1152844 /* dummy.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
