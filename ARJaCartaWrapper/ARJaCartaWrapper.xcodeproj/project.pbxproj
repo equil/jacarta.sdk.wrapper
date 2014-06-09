@@ -393,6 +393,7 @@
 		6B273D6E1946212D00740B02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";
@@ -414,6 +415,7 @@
 		6B273D6F1946212D00740B02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";
