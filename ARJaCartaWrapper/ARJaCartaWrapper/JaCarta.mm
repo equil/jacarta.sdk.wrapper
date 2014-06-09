@@ -4,6 +4,10 @@
 
 #import "JaCarta.h"
 
+void iR301SetTimeout() {
+
+}
+
 @implementation JaCarta
 
 + (CK_RV)initializeLibrary

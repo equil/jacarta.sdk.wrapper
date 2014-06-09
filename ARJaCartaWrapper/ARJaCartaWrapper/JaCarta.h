@@ -5,6 +5,8 @@
 #import <Foundation/Foundation.h>
 #import "Extensions.h"
 
+void iR301SetTimeout();
+
 @interface JaCarta : NSObject
 
 + (CK_RV) initializeLibrary;
