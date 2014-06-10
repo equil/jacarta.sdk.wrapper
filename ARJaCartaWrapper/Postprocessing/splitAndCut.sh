@@ -24,7 +24,8 @@ do
     ar r $TMP/libfoo-$arch-unstripped.a $TMP/winscard.o
     rm $TMP/winscard.o
 
-    strip -s saveSymbols.conf -i -o $TMP/libfoo-$arch.a $TMP/libfoo-$arch-unstripped.a
+    mv $TMP/libfoo-$arch-unstripped.a $TMP/libfoo-$arch.a
+#    strip -s saveSymbols.conf -i -o $TMP/libfoo-$arch.a $TMP/libfoo-$arch-unstripped.a
 done
 
 rm -f $TMP/*-unstripped.a
