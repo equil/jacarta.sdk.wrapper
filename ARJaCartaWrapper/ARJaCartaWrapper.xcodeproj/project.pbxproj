@@ -31,6 +31,7 @@
 		6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008A81946F18F0037C119 /* removeSymbols.conf */; };
 		6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655655EA2575BCAE3BBE3787 /* splitAndCut.sh */; };
 		6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655658C60AA6513977191E82 /* saveSymbols.conf */; };
+		6BC008AE1947174C0037C119 /* objconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008AD194717400037C119 /* objconv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				6BC008AE1947174C0037C119 /* objconv in CopyFiles */,
 				6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */,
 				6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */,
 				6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */,
@@ -86,6 +88,7 @@
 		6B273D7519465AA000740B02 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		6B273E18194666F400740B02 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6BC008A81946F18F0037C119 /* removeSymbols.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = removeSymbols.conf; sourceTree = "<group>"; };
+		6BC008AD194717400037C119 /* objconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = objconv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		65565536CB472869DE7D1EC4 /* Postprocessing */ = {
 			isa = PBXGroup;
 			children = (
+				6BC008AD194717400037C119 /* objconv */,
 				655655EA2575BCAE3BBE3787 /* splitAndCut.sh */,
 				6BC008A81946F18F0037C119 /* removeSymbols.conf */,
 				655658C60AA6513977191E82 /* saveSymbols.conf */,
@@ -314,7 +318,6 @@
 			files = (
 			);
 			inputPaths = (
-				"",
 			);
 			outputPaths = (
 			);

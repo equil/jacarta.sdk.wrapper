@@ -18,6 +18,12 @@ TMP=`mktemp -d /tmp/tmp.XXXXXX`
 for arch in `file "$1"|grep 'architecture '|sed 's/.*(for architecture \(.*\)).*/\1/'`
 do
 	lipo "$1" -thin $arch -output $TMP/libfoo-$arch-unstripped.a
+
+    ar x $TMP/libfoo-$arch-unstripped.a $TMP/winscard.o
+    strip -R removeSymbols.conf -i -u -r -A $TMP/winscard.o
+    ar r $TMP/libfoo-$arch-unstripped.a $TMP/winscard.o
+    rm $TMP/winscard.o
+
     strip -s saveSymbols.conf -i -o $TMP/libfoo-$arch.a $TMP/libfoo-$arch-unstripped.a
 done
 
