@@ -323,7 +323,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${TARGET_BUILD_DIR}\n./splitAndCut.sh libARJaCartaWrapper.a";
+			shellScript = "echo ${TARGET_BUILD_DIR}\ncd ${TARGET_BUILD_DIR}\n./splitAndCut.sh libARJaCartaWrapper.a";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
