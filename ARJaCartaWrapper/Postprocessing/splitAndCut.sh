@@ -23,6 +23,8 @@ done
 
 rm -f $TMP/*-unstripped.a
 
+echo "Creating lib $1"
+
 lipo -create -output "$1" $TMP/*.a
 
 rm -f $TMP/*.a
