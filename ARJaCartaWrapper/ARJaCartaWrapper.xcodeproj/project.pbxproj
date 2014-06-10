@@ -399,6 +399,7 @@
 		6B273D6E1946212D00740B02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -415,12 +416,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		6B273D6F1946212D00740B02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -434,6 +437,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 armv7 armv7s";
 			};
 			name = Release;
 		};
