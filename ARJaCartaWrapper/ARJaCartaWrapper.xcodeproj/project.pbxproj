@@ -11,7 +11,6 @@
 		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
 		65565A7A8DE6B5505B776E6F /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655E0C3B24D75D838D6B0 /* dummy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
-		6B273D531946212D00740B02 /* ARJaCartaWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B273D521946212D00740B02 /* ARJaCartaWrapper.h */; };
 		6B273D5C1946212D00740B02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5B1946212D00740B02 /* XCTest.framework */; };
 		6B273D5D1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
 		6B273D5F1946212D00740B02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5E1946212D00740B02 /* UIKit.framework */; };
@@ -31,6 +30,7 @@
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008A81946F18F0037C119 /* removeSymbols.conf */; };
 		6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655655EA2575BCAE3BBE3787 /* splitAndCut.sh */; };
+		6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655658C60AA6513977191E82 /* saveSymbols.conf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,22 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6B273D481946212D00740B02 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				6B273D531946212D00740B02 /* ARJaCartaWrapper.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6BC008A91946F1CE0037C119 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */,
 				6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */,
 				6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */,
 			);
@@ -76,6 +67,7 @@
 		655655EA2575BCAE3BBE3787 /* splitAndCut.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = splitAndCut.sh; sourceTree = "<group>"; };
 		65565775C7BF2350C69E3AD4 /* pkcs11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11.h; path = ../jacarta/include/pkcs11.h; sourceTree = "<group>"; };
 		655658589DA5EBD9633CE031 /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Extensions.h; path = ../jacarta/include/Extensions.h; sourceTree = "<group>"; };
+		655658C60AA6513977191E82 /* saveSymbols.conf */ = {isa = PBXFileReference; lastKnownFileType = file.conf; path = saveSymbols.conf; sourceTree = "<group>"; };
 		655658C8D0B5C5FE44B64A88 /* cryptoki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptoki.h; path = ../jacarta/include/cryptoki.h; sourceTree = "<group>"; };
 		65565E3C204832CA029F97D8 /* JaCarta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JaCarta.h; sourceTree = "<group>"; };
 		65565EB9FA984C14C5E595D7 /* pkcs11t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11t.h; path = ../jacarta/include/pkcs11t.h; sourceTree = "<group>"; };
@@ -126,6 +118,7 @@
 			children = (
 				655655EA2575BCAE3BBE3787 /* splitAndCut.sh */,
 				6BC008A81946F18F0037C119 /* removeSymbols.conf */,
+				655658C60AA6513977191E82 /* saveSymbols.conf */,
 			);
 			path = Postprocessing;
 			sourceTree = "<group>";
@@ -246,7 +239,6 @@
 			buildPhases = (
 				6B273D461946212D00740B02 /* Sources */,
 				6B273D471946212D00740B02 /* Frameworks */,
-				6B273D481946212D00740B02 /* CopyFiles */,
 				6BC008A91946F1CE0037C119 /* CopyFiles */,
 				6B273D7719465FD900740B02 /* Headers */,
 				6BC008A71946EC9E0037C119 /* ShellScript */,
@@ -444,7 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				DEPLOYMENT_POSTPROCESSING = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";
@@ -468,7 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DEPLOYMENT_POSTPROCESSING = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";

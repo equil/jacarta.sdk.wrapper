@@ -1,9 +1,5 @@
 #!/bin/sh
 
-#
-## Strip debug symbol from universal static libraries
-#
-
 if [ -z "$1" ]
 then
 	echo "$0: Please, specify a library in first argument."
@@ -22,7 +18,7 @@ TMP=`mktemp -d /tmp/tmp.XXXXXX`
 for arch in `file "$1"|grep 'architecture '|sed 's/.*(for architecture \(.*\)).*/\1/'`
 do
 	lipo "$1" -thin $arch -output $TMP/libfoo-$arch-unstripped.a
-    strip -S -x -R removeSymbols.conf -o $TMP/libfoo-$arch.a $TMP/libfoo-$arch-unstripped.a
+    strip -s saveSymbols.conf -i -o $TMP/libfoo-$arch.a $TMP/libfoo-$arch-unstripped.a
 done
 
 rm -f $TMP/*-unstripped.a
