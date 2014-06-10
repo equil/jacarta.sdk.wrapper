@@ -29,7 +29,6 @@
 		6B273E0D194664B200740B02 /* pkcs11.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565775C7BF2350C69E3AD4 /* pkcs11.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0E194664B400740B02 /* pkcs11f.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565536643D76AC3BBB6030 /* pkcs11f.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E19194666F400740B02 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273E18194666F400740B02 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B273E19194666F400740B02 /* libstdc++.dylib in Frameworks */,
 				6B273D7619465AA000740B02 /* ExternalAccessory.framework in Frameworks */,
 				6B273D741946278200740B02 /* libjcPKCS11.a in Frameworks */,
 				6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */,
