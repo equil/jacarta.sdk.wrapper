@@ -34,11 +34,10 @@ mv $TMP/saveSymbols.temp.conf saveSymbols.conf
 
 mkfifo tmppipe
 
-nm $1 | grep '_lmFunctionsLoader'
+nm $1 | grep '_lmFunctionsLoader' 2> tmppipe | grep '.*' tmppipe > $1.beforeRD.txt
 
 cp $1 $TMP/libfoo.a
 OUTPUT=$( strip -R removeSymbols.conf -r -u -A -x -i -o $1 $TMP/libfoo.a 2> tmppipe | grep '.*' tmppipe )
-echo "${OUTPUT}"
 
 nm $1 | grep '_lmFunctionsLoader'
 
