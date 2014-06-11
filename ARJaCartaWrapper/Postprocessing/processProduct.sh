@@ -26,6 +26,7 @@ else
         lipo "$1" -thin $arch -output $TMP/"$1"-$arch.a
 
         ./mimicSymbol.sh $TMP/"$1"-$arch.a iReader301.o _SCardTransmit
+        ./mimicSymbol.sh $TMP/"$1"-$arch.a eTokenGOST.o _lmFunctionsLoader _eTokenGOST
         ./stripFlatLibrary.sh $TMP/"$1"-$arch.a
 
     done
