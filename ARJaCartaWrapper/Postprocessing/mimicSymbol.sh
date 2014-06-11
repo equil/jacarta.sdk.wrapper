@@ -13,7 +13,7 @@ TMP=`mktemp -d /tmp/tmp.XXXXXX`
 cp $1 $TMP/libfoo-mimic.a
 
 ar x $TMP/libfoo-mimic.a $TMP/$2
-./objconv -v0 -nr:$3:${SUFFIX}$3 $TMP/$2 $TMP/$2-temp > /dev/null
+./objconv -fmacho32 -v0 -nr:$3:${SUFFIX}$3 $TMP/$2 $TMP/$2-temp > /dev/null
 rm $TMP/$2
 mv $TMP/$2-temp $TMP/$2
 ar r $TMP/libfoo-mimic.a $TMP/$2
