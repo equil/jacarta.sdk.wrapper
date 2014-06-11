@@ -28,10 +28,14 @@
 		6B273E0D194664B200740B02 /* pkcs11.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565775C7BF2350C69E3AD4 /* pkcs11.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0E194664B400740B02 /* pkcs11f.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565536643D76AC3BBB6030 /* pkcs11f.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BBDB37019489BF200B65CF7 /* stripFlatLibrary.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65565583FA2E00E8E3278E01 /* stripFlatLibrary.sh */; };
+		6BBDB37119489BF200B65CF7 /* mimicSymbol.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65565345808C3D1D3065A90E /* mimicSymbol.sh */; };
+		6BBDB37219489BF200B65CF7 /* processProduct.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6556529ECBA2E91DFC5AFF37 /* processProduct.sh */; };
 		6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008A81946F18F0037C119 /* removeSymbols.conf */; };
 		6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655655EA2575BCAE3BBE3787 /* splitAndCut.sh */; };
 		6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655658C60AA6513977191E82 /* saveSymbols.conf */; };
 		6BC008AE1947174C0037C119 /* objconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008AD194717400037C119 /* objconv */; };
+		6BC008BF1947C1680037C119 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC008BE1947C1680037C119 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				6BBDB37019489BF200B65CF7 /* stripFlatLibrary.sh in CopyFiles */,
+				6BBDB37119489BF200B65CF7 /* mimicSymbol.sh in CopyFiles */,
+				6BBDB37219489BF200B65CF7 /* processProduct.sh in CopyFiles */,
 				6BC008AE1947174C0037C119 /* objconv in CopyFiles */,
 				6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */,
 				6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */,
@@ -62,9 +69,12 @@
 
 /* Begin PBXFileReference section */
 		65565250EDBA18BFA47A4738 /* C_jcControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_jcControl.h; path = ../jacarta/include/C_jcControl.h; sourceTree = "<group>"; };
+		6556529ECBA2E91DFC5AFF37 /* processProduct.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = processProduct.sh; sourceTree = "<group>"; };
+		65565345808C3D1D3065A90E /* mimicSymbol.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mimicSymbol.sh; sourceTree = "<group>"; };
 		65565536643D76AC3BBB6030 /* pkcs11f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11f.h; path = ../jacarta/include/pkcs11f.h; sourceTree = "<group>"; };
 		6556555F2E85792F8F962366 /* dummy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dummy.c; sourceTree = "<group>"; };
 		6556557ECA05C7646C6BB3C6 /* JaCarta.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JaCarta.mm; sourceTree = "<group>"; };
+		65565583FA2E00E8E3278E01 /* stripFlatLibrary.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = stripFlatLibrary.sh; sourceTree = "<group>"; };
 		655655E0C3B24D75D838D6B0 /* dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
 		655655EA2575BCAE3BBE3787 /* splitAndCut.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = splitAndCut.sh; sourceTree = "<group>"; };
 		65565775C7BF2350C69E3AD4 /* pkcs11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pkcs11.h; path = ../jacarta/include/pkcs11.h; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 		6B273E18194666F400740B02 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6BC008A81946F18F0037C119 /* removeSymbols.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = removeSymbols.conf; sourceTree = "<group>"; };
 		6BC008AD194717400037C119 /* objconv */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = objconv; sourceTree = "<group>"; };
+		6BC008BE1947C1680037C119 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../jacarta/libcrypto.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC008BF1947C1680037C119 /* libcrypto.a in Frameworks */,
 				6B273D7619465AA000740B02 /* ExternalAccessory.framework in Frameworks */,
 				6B273D741946278200740B02 /* libjcPKCS11.a in Frameworks */,
 				6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */,
@@ -123,6 +135,9 @@
 				655655EA2575BCAE3BBE3787 /* splitAndCut.sh */,
 				6BC008A81946F18F0037C119 /* removeSymbols.conf */,
 				655658C60AA6513977191E82 /* saveSymbols.conf */,
+				65565583FA2E00E8E3278E01 /* stripFlatLibrary.sh */,
+				65565345808C3D1D3065A90E /* mimicSymbol.sh */,
+				6556529ECBA2E91DFC5AFF37 /* processProduct.sh */,
 			);
 			path = Postprocessing;
 			sourceTree = "<group>";
@@ -165,6 +180,7 @@
 		6B273D4C1946212D00740B02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BC008BE1947C1680037C119 /* libcrypto.a */,
 				6B273E18194666F400740B02 /* libstdc++.dylib */,
 				6B273D7519465AA000740B02 /* ExternalAccessory.framework */,
 				6B273D731946278200740B02 /* libjcPKCS11.a */,
@@ -323,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo ${TARGET_BUILD_DIR}\ncd ${TARGET_BUILD_DIR}\n./splitAndCut.sh libARJaCartaWrapper.a";
+			shellScript = "echo ${TARGET_BUILD_DIR}\ncd ${TARGET_BUILD_DIR}\n./processProduct.sh libARJaCartaWrapper.a";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
