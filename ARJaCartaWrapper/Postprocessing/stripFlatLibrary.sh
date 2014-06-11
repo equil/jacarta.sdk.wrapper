@@ -37,7 +37,7 @@ nm $1 | grep '_lmFunctionsLoader'
 
 cp $1 $TMP/libfoo.a
 mkfifo tmppipe
-OUTPUT=$( strip -r removeSymbols.conf -i -o $1 $TMP/libfoo.a 2> tmppipe | grep '.*' tmppipe )
+OUTPUT=$( strip -R removeSymbols.conf -i -o $1 $TMP/libfoo.a 2> tmppipe | grep '.*' tmppipe )
 echo "${OUTPUT}"
 rm -f tmppipe
 
