@@ -31,6 +31,12 @@ done
 rm saveSymbols.conf
 mv $TMP/saveSymbols.temp.conf saveSymbols.conf
 
+cp $1 $TMP/libfoo.a
+mkfifo tmppipe
+OUTPUT=$( strip -r -u -A -R removeSymbols.conf -i -o $1 $TMP/libfoo.a 2> tmppipe | grep '.*' tmppipe )
+echo "${OUTPUT}"
+rm -f tmppipe
+
 rm $TMP/libfoo.a
 
 rmdir $TMP
