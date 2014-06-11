@@ -17,7 +17,7 @@ file "$1"|grep 'universal binary' >/dev/null 2>&1
 if [ $? -ne 0 ]
 then
     ./mimicSymbol.sh "$1" iReader301.o _SCardTransmit
-    ./stripFlatLibrary "$1"
+    ./stripFlatLibrary.sh "$1"
 else
     TMP=`mktemp -d /tmp/tmp.XXXXXX`
 
