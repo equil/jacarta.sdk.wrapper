@@ -31,20 +31,12 @@ done
 rm saveSymbols.conf
 mv $TMP/saveSymbols.temp.conf saveSymbols.conf
 
-
 mkfifo tmppipe
-
-nm $1 | grep '.*' 2> tmppipe | grep '.*' tmppipe > lib.beforeRD.txt
-
 cp $1 $TMP/libfoo.a
 OUTPUT=$( strip -R removeSymbols.conf -r -u -A -x -i -o $1 $TMP/libfoo.a 2> tmppipe | grep '.*' tmppipe )
-
-nm $1 | grep '_lmFunctionsLoader'
-
 rm -f tmppipe
 
 rm $TMP/libfoo.a
-
 rmdir $TMP
 
 echo "Finish strip of library $1"
