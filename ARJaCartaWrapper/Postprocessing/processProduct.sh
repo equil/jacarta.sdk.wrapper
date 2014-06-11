@@ -27,6 +27,9 @@ else
 
         ./mimicSymbol.sh $TMP/"$1"-$arch.a iReader301.o _SCardTransmit
         ./mimicSymbol.sh $TMP/"$1"-$arch.a eTokenGOST.o _lmFunctionsLoader _eTokenGOST
+        ./mimicSymbol.sh $TMP/"$1"-$arch.a LoadableModule.o _lmFunctionsLoader _LoadableModule
+        ./mimicSymbol.sh $TMP/"$1"-$arch.a PKCS11.o _lmFunctionsLoader _PKCS11
+        ./mimicSymbol.sh $TMP/"$1"-$arch.a API.o _lmFunctionsLoader _API
         ./stripFlatLibrary.sh $TMP/"$1"-$arch.a
 
     done
