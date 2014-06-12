@@ -6,21 +6,21 @@
 
 @implementation JaCarta
 
-+ (CK_RV)initializeLibrary
++ (CK_RV)initializeLibrary:(CK_VOID_PTR)args
 {
 #if TARGET_IPHONE_SIMULATOR
     return CKR_OK;
 #else
-    return C_Initialize (NULL);
+    return C_Initialize (args);
 #endif
 }
 
-+ (CK_RV)finalizeLibrary
++ (CK_RV)finalizeLibrary:(CK_VOID_PTR)reserved
 {
 #if TARGET_IPHONE_SIMULATOR
     return CKR_OK;
 #else
-    return C_Finalize (NULL);
+    return C_Finalize (reserved);
 #endif
 }
 
@@ -188,22 +188,25 @@
 
 + (CK_RV)openSessionForSlotId:(CK_SLOT_ID)slotId
                         flags:(CK_FLAGS)flags
-               sessionPointer:(CK_SESSION_HANDLE_PTR)sessionPointer
+                  application:(CK_VOID_PTR)application
+                       notify:(CK_NOTIFY)notify
+                      session:(CK_SESSION_HANDLE_PTR)session
 {
 #if TARGET_IPHONE_SIMULATOR
     return CKR_OK;
 #else
-    return C_OpenSession (slotId, flags, 0, 0, sessionPointer);
+    return C_OpenSession (slotId, flags, application, notify, session);
 #endif
 }
 
 + (CK_RV)waitForSlotEventWithFlags:(CK_FLAGS)flags
                      slotIdPointer:(CK_SLOT_ID_PTR)slotIdPointer
+                           rserved:(CK_VOID_PTR)reserved
 {
 #if TARGET_IPHONE_SIMULATOR
     return CKR_OK;
 #else
-    return C_WaitForSlotEvent (flags, slotIdPointer, NULL);
+    return C_WaitForSlotEvent (flags, slotIdPointer, reserved);
 #endif
 }
 

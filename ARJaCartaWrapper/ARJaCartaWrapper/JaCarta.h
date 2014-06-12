@@ -7,9 +7,9 @@
 
 @interface JaCarta : NSObject
 
-+ (CK_RV)initializeLibrary;
++ (CK_RV)initializeLibrary:(CK_VOID_PTR)args;
 
-+ (CK_RV)finalizeLibrary;
++ (CK_RV)finalizeLibrary:(CK_VOID_PTR)reserved;
 
 + (CK_RV)generateRandomInSession:(CK_SESSION_HANDLE)session
                             data:(CK_BYTE_PTR)data
@@ -70,8 +70,12 @@
 
 + (CK_RV)openSessionForSlotId:(CK_SLOT_ID)slotId
                         flags:(CK_FLAGS)flags
-               sessionPointer:(CK_SESSION_HANDLE_PTR)sessionPointer;
+                  application:(CK_VOID_PTR)application
+                       notify:(CK_NOTIFY)notify
+                      session:(CK_SESSION_HANDLE_PTR)session;
 
 + (CK_RV)waitForSlotEventWithFlags:(CK_FLAGS)flags
-                     slotIdPointer:(CK_SLOT_ID_PTR)slotIdPointer;
+                     slotIdPointer:(CK_SLOT_ID_PTR)slotIdPointer
+                           rserved:(CK_VOID_PTR)reserved;
+
 @end
