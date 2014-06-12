@@ -14,4 +14,7 @@
 + (CK_RV) generateRandomWithSession: (CK_SESSION_HANDLE) session
                                data: (CK_BYTE_PTR) data
                              length: (CK_ULONG) length;
+
++ (CK_RV)getSlotInfoForSlotId:(CK_SLOT_ID)slotID
+                  infoPointer:(CK_SLOT_INFO_PTR)infoPointer;
 @end

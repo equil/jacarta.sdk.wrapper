@@ -35,4 +35,14 @@
 #endif
 }
 
++ (CK_RV)getSlotInfoForSlotId:(CK_SLOT_ID)slotID
+                  infoPointer:(CK_SLOT_INFO_PTR)infoPointer
+{
+#if TARGET_IPHONE_SIMULATOR
+    return CKR_OK;
+#else
+    return C_GetSlotInfo (slotID, infoPointer);
+#endif
+}
+
 @end
