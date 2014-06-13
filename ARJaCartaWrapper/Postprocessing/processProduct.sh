@@ -1,36 +1,30 @@
 #!/bin/sh
 
-if [ -z "$1" ]
+file "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}"|grep 'ar archive random library' >/dev/null 2>&1
+if [ $? -ne 0 ]
 then
-	echo "$0: Please, specify a library in first argument."
+	echo "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}: not a static library"
 	exit 1
 fi
 
-file "$1"|grep 'ar archive random library' >/dev/null 2>&1
+file "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}"|grep 'universal binary' >/dev/null 2>&1
 if [ $? -ne 0 ]
 then
-	echo "$1: not a static library"
-	exit 1
-fi
-
-file "$1"|grep 'universal binary' >/dev/null 2>&1
-if [ $? -ne 0 ]
-then
-    ./mimicSymbol.sh "$1" iReader301.o _SCardTransmit
-    ./stripFlatLibrary.sh "$1"
+    ./mimicSymbol.sh "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}" iReader301.o _SCardTransmit
+    ./stripFlatLibrary.sh "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}"
 else
     TMP=`mktemp -d /tmp/tmp.XXXXXX`
 
     for arch in `file "$1"|grep 'architecture '|sed 's/.*(for architecture \(.*\)).*/\1/'`
     do
-        lipo "$1" -thin $arch -output $TMP/"$1"-$arch.a
+        lipo "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}" -thin $arch -output $TMP/"${EXECUTABLE_NAME}"-$arch.a
 
-        ./mimicSymbol.sh $TMP/"$1"-$arch.a iReader301.o _SCardTransmit
-        ./stripFlatLibrary.sh $TMP/"$1"-$arch.a
+        ./mimicSymbol.sh $TMP/"${EXECUTABLE_NAME}"-$arch.a iReader301.o _SCardTransmit
+        ./stripFlatLibrary.sh $TMP/"${EXECUTABLE_NAME}"-$arch.a
 
     done
 
-    lipo -create -output "$1" $TMP/*.a
+    lipo -create -output "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}" $TMP/*.a
 
     rm -f -r $TMP/*.a
     rmdir $TMP

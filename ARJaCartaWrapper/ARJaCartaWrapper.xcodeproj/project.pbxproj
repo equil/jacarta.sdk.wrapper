@@ -28,13 +28,6 @@
 		6B273E0D194664B200740B02 /* pkcs11.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565775C7BF2350C69E3AD4 /* pkcs11.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0E194664B400740B02 /* pkcs11f.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565536643D76AC3BBB6030 /* pkcs11f.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BBDB37019489BF200B65CF7 /* stripFlatLibrary.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65565583FA2E00E8E3278E01 /* stripFlatLibrary.sh */; };
-		6BBDB37119489BF200B65CF7 /* mimicSymbol.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65565345808C3D1D3065A90E /* mimicSymbol.sh */; };
-		6BBDB37219489BF200B65CF7 /* processProduct.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6556529ECBA2E91DFC5AFF37 /* processProduct.sh */; };
-		6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008A81946F18F0037C119 /* removeSymbols.conf */; };
-		6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655655EA2575BCAE3BBE3787 /* splitAndCut.sh */; };
-		6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 655658C60AA6513977191E82 /* saveSymbols.conf */; };
-		6BC008AE1947174C0037C119 /* objconv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC008AD194717400037C119 /* objconv */; };
 		6BC008BF1947C1680037C119 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC008BE1947C1680037C119 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
@@ -55,13 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				6BBDB37019489BF200B65CF7 /* stripFlatLibrary.sh in CopyFiles */,
-				6BBDB37119489BF200B65CF7 /* mimicSymbol.sh in CopyFiles */,
-				6BBDB37219489BF200B65CF7 /* processProduct.sh in CopyFiles */,
-				6BC008AE1947174C0037C119 /* objconv in CopyFiles */,
-				6BC008AC1946F7AE0037C119 /* saveSymbols.conf in CopyFiles */,
-				6BC008AB1946F1F30037C119 /* splitAndCut.sh in CopyFiles */,
-				6BC008AA1946F1DD0037C119 /* removeSymbols.conf in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo ${TARGET_BUILD_DIR}\ncd ${TARGET_BUILD_DIR}\n./processProduct.sh libARJaCartaWrapper.a";
-			showEnvVarsInLog = 0;
+			shellScript = "cd Postprocessing\n./processProduct.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
