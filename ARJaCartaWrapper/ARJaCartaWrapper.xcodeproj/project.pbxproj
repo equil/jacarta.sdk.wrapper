@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		655650CC9234E81AF1152844 /* dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 6556555F2E85792F8F962366 /* dummy.c */; };
 		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
-		6556566720E55D803AAA7D1E /* jcw.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556505D4D69518AB86EF16A /* jcw.h */; };
+		6556566720E55D803AAA7D1E /* jcw.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556505D4D69518AB86EF16A /* jcw.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
 		6B273D5C1946212D00740B02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5B1946212D00740B02 /* XCTest.framework */; };
 		6B273D5D1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
@@ -221,8 +221,8 @@
 			files = (
 				6B273D7919465FED00740B02 /* ARJaCartaWrapper.h in Headers */,
 				6B273E0F194664B800740B02 /* pkcs11t.h in Headers */,
-				6B273D7819465FE300740B02 /* JaCarta.h in Headers */,
 				6556566720E55D803AAA7D1E /* jcw.h in Headers */,
+				6B273D7819465FE300740B02 /* JaCarta.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
