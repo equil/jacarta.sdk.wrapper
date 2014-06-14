@@ -3,7 +3,13 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#ifndef CK_PTR
+    #define CK_PTR *
+#endif
+
 #import "pkcs11t.h"
+
 
 @interface JaCarta : NSObject
 
