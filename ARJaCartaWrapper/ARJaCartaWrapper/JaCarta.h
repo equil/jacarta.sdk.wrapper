@@ -3,22 +3,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#ifndef CK_PTR
-    #define CK_PTR *
-#endif
-
-#import "pkcs11t.h"
-
+#import "jcw.h"
 
 @interface JaCarta : NSObject
 
-+ (CK_RV)initializeLibrary:(void *)args;
++ (CK_RV)initializeLibrary:(CK_VOID_PTR)args;
 
-+ (CK_RV)finalizeLibrary:(void *)reserved;
++ (CK_RV)finalizeLibrary:(CK_VOID_PTR)reserved;
 
 + (CK_RV)generateRandomInSession:(CK_SESSION_HANDLE)session
-                            data:(CK_BYTE *)data
+                            data:(CK_BYTE_PTR)data
                           length:(CK_ULONG)length;
 
 + (CK_RV)getSlotInfoForSlotId:(CK_SLOT_ID)slotID
@@ -28,46 +22,46 @@
                    infoPointer:(CK_TOKEN_INFO *)infoPointer;
 
 + (CK_RV)initPINInSession:(CK_SESSION_HANDLE)session
-                      pin:(CK_UTF8CHAR *)pin
+                      pin:(CK_UTF8CHAR_PTR)pin
                 pinLength:(CK_ULONG)pinLength;
 
 + (CK_RV)initTokenForSlotId:(CK_SLOT_ID)slotId
-                        pin:(CK_UTF8CHAR *)pin
+                        pin:(CK_UTF8CHAR_PTR)pin
                   pinLength:(CK_ULONG)pinLength
-                      label:(CK_UTF8CHAR *)label;
+                      label:(CK_UTF8CHAR_PTR)label;
 
 + (CK_RV)createObjectInSession:(CK_SESSION_HANDLE)session
-               templatePointer:(CK_ATTRIBUTE *)templatePointer
+               templatePointer:(CK_ATTRIBUTE_PTR)templatePointer
                          count:(CK_ULONG)count
-                        object:(CK_OBJECT_HANDLE *)objectPointer;
+                        object:(CK_OBJECT_HANDLE_PTR)objectPointer;
 
 + (CK_RV)destroyObjectInSession:(CK_SESSION_HANDLE)session
                          object:(CK_OBJECT_HANDLE)object;
 
 + (CK_RV)findObjectsInitInSession:(CK_SESSION_HANDLE)session
-                  templatePointer:(CK_ATTRIBUTE *)templatePointer
+                  templatePointer:(CK_ATTRIBUTE_PTR)templatePointer
                             count:(CK_ULONG)count;
 
 + (CK_RV)findObjectsInSession:(CK_SESSION_HANDLE)session
-                objectPointer:(CK_OBJECT_HANDLE *)objectsPointer
+                objectPointer:(CK_OBJECT_HANDLE_PTR)objectsPointer
               maxObjectsCount:(CK_ULONG)maxObjectsCount
-           pulledObjectsCount:(CK_ULONG *)pulledObjectsCount;
+           pulledObjectsCount:(CK_ULONG_PTR)pulledObjectsCount;
 
 + (CK_RV)findObjectsFinalInSession:(CK_SESSION_HANDLE)session;
 
 + (CK_RV)getAttributeValueInSession:(CK_SESSION_HANDLE)session
                              object:(CK_OBJECT_HANDLE)object
-                    templatePointer:(CK_ATTRIBUTE *)templatePointer
+                    templatePointer:(CK_ATTRIBUTE_PTR)templatePointer
                               count:(CK_ULONG)count;
 
 + (CK_RV)setAttributeValueInSession:(CK_SESSION_HANDLE)session
                              object:(CK_OBJECT_HANDLE)object
-                    templatePointer:(CK_ATTRIBUTE *)templatePointer
+                    templatePointer:(CK_ATTRIBUTE_PTR)templatePointer
                               count:(CK_ULONG)count;
 
 + (CK_RV)loginInSession:(CK_SESSION_HANDLE)session
                userType:(CK_USER_TYPE)userType
-                    pin:(CK_UTF8CHAR *)pin
+                    pin:(CK_UTF8CHAR_PTR)pin
               pinLength:(CK_ULONG)pinLength;
 
 + (CK_RV)logoutFromSession:(CK_SESSION_HANDLE)session;
@@ -76,12 +70,12 @@
 
 + (CK_RV)openSessionForSlotId:(CK_SLOT_ID)slotId
                         flags:(CK_FLAGS)flags
-                  application:(void *)application
+                  application:(CK_VOID_PTR)application
                        notify:(CK_NOTIFY)notify
-                      session:(CK_SESSION_HANDLE *)session;
+                      session:(CK_SESSION_HANDLE_PTR)session;
 
 + (CK_RV)waitForSlotEventWithFlags:(CK_FLAGS)flags
-                     slotIdPointer:(CK_SLOT_ID *)slotIdPointer
-                           rserved:(void *)reserved;
+                     slotIdPointer:(CK_SLOT_ID_PTR)slotIdPointer
+                           rserved:(CK_VOID_PTR)reserved;
 
 @end

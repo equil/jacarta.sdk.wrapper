@@ -20,8 +20,8 @@
  * for building Win32 Cryptoki libraries and applications.
  */
 
-#ifndef ___CRYPTOKI_H_INC___
-#define ___CRYPTOKI_H_INC___
+#ifndef ___JCW_H_INC___
+#define ___JCW_H_INC___
 
 #if !defined(CK_Win32) && !defined(CK_Win16) && !defined(CK_GENERIC)
 #error no OS type define (needs to be one of CK_Win32, CK_Win16, CK_GENERIC)

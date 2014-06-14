@@ -3,6 +3,7 @@
 //
 
 #import "JaCarta.h"
+#import "pkcs11.h"
 
 @implementation JaCarta
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		655650CC9234E81AF1152844 /* dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 6556555F2E85792F8F962366 /* dummy.c */; };
 		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
+		6556566720E55D803AAA7D1E /* jcw.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556505D4D69518AB86EF16A /* jcw.h */; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
 		6B273D5C1946212D00740B02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5B1946212D00740B02 /* XCTest.framework */; };
 		6B273D5D1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6556505D4D69518AB86EF16A /* jcw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jcw.h; sourceTree = "<group>"; };
 		65565250EDBA18BFA47A4738 /* C_jcControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_jcControl.h; path = ../jacarta/include/C_jcControl.h; sourceTree = "<group>"; };
 		6556529ECBA2E91DFC5AFF37 /* processProduct.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = processProduct.sh; sourceTree = "<group>"; };
 		65565345808C3D1D3065A90E /* mimicSymbol.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mimicSymbol.sh; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				65565E3C204832CA029F97D8 /* JaCarta.h */,
 				655655E0C3B24D75D838D6B0 /* dummy.h */,
 				6556555F2E85792F8F962366 /* dummy.c */,
+				6556505D4D69518AB86EF16A /* jcw.h */,
 			);
 			path = ARJaCartaWrapper;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				6B273D7919465FED00740B02 /* ARJaCartaWrapper.h in Headers */,
 				6B273E0F194664B800740B02 /* pkcs11t.h in Headers */,
 				6B273D7819465FE300740B02 /* JaCarta.h in Headers */,
+				6556566720E55D803AAA7D1E /* jcw.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +435,7 @@
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					CK_GENERIC,
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/alexeyrogatkin/Documents/iDecide/sources/jacarta.sdk.wrapper/jacarta,
@@ -455,7 +456,7 @@
 				DSTROOT = /tmp/ARJaCartaWrapper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARJaCartaWrapper/ARJaCartaWrapper-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = CK_GENERIC;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/alexeyrogatkin/Documents/iDecide/sources/jacarta.sdk.wrapper/jacarta,

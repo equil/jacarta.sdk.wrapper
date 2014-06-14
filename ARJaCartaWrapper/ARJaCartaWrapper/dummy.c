@@ -1,4 +1,3 @@
-#import <assert.h>
 
 int __attribute__((weak)) iR301SetTimeout(void) {
     return 0;
