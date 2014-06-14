@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		655650CC9234E81AF1152844 /* dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 6556555F2E85792F8F962366 /* dummy.c */; };
 		655653CA5502B809CE21B5EF /* JaCarta.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6556557ECA05C7646C6BB3C6 /* JaCarta.mm */; };
-		65565A7A8DE6B5505B776E6F /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655E0C3B24D75D838D6B0 /* dummy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273D4E1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
 		6B273D5C1946212D00740B02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D5B1946212D00740B02 /* XCTest.framework */; };
 		6B273D5D1946212D00740B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D4D1946212D00740B02 /* Foundation.framework */; };
@@ -21,12 +20,6 @@
 		6B273D7619465AA000740B02 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B273D7519465AA000740B02 /* ExternalAccessory.framework */; };
 		6B273D7819465FE300740B02 /* JaCarta.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565E3C204832CA029F97D8 /* JaCarta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273D7919465FED00740B02 /* ARJaCartaWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B273D521946212D00740B02 /* ARJaCartaWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E09194664A700740B02 /* VisualExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565F54924B95780E080B90 /* VisualExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E0A194664AA00740B02 /* C_jcControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565250EDBA18BFA47A4738 /* C_jcControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E0B194664AC00740B02 /* cryptoki.h in Headers */ = {isa = PBXBuildFile; fileRef = 655658C8D0B5C5FE44B64A88 /* cryptoki.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E0C194664AF00740B02 /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 655658589DA5EBD9633CE031 /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E0D194664B200740B02 /* pkcs11.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565775C7BF2350C69E3AD4 /* pkcs11.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B273E0E194664B400740B02 /* pkcs11f.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565536643D76AC3BBB6030 /* pkcs11f.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B273E0F194664B800740B02 /* pkcs11t.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565EB9FA984C14C5E595D7 /* pkcs11t.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC008BF1947C1680037C119 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC008BE1947C1680037C119 /* libcrypto.a */; };
 /* End PBXBuildFile section */
@@ -224,15 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B273D7919465FED00740B02 /* ARJaCartaWrapper.h in Headers */,
-				65565A7A8DE6B5505B776E6F /* dummy.h in Headers */,
-				6B273E0A194664AA00740B02 /* C_jcControl.h in Headers */,
-				6B273E0B194664AC00740B02 /* cryptoki.h in Headers */,
-				6B273E0C194664AF00740B02 /* Extensions.h in Headers */,
 				6B273E0F194664B800740B02 /* pkcs11t.h in Headers */,
-				6B273E0E194664B400740B02 /* pkcs11f.h in Headers */,
-				6B273E0D194664B200740B02 /* pkcs11.h in Headers */,
 				6B273D7819465FE300740B02 /* JaCarta.h in Headers */,
-				6B273E09194664A700740B02 /* VisualExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
